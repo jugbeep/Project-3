@@ -20,12 +20,12 @@ export class SearchComponent implements OnInit {
 
   findMonster() {
 		console.log('I want to search http://dnd5eapi.co/api/');
-		this.http.get('http://dnd5eapi.co/api/classes/')		
+		this.http.get('http://dnd5eapi.co/api/monsters/')		
 		.toPromise()
-		// .then(response => console.log(response.json().results));
+    // .then(response => this.results )
+	  //.then(response => console.log(response.json().results));
 		.then(response => this.results = response.json().results);
 	}
 
 }
-
 
